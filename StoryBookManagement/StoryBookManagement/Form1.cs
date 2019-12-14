@@ -15,6 +15,7 @@ namespace StoryBookManagement
         public Form1()
         {
             InitializeComponent();
+
         }
     }
 }
