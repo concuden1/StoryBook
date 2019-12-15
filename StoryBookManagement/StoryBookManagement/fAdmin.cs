@@ -20,18 +20,30 @@ namespace StoryBookManagement
 
             LoadAccountList();
         }
-        void LoadBookList()
-        {
-            string query = "select * from book";
-
-            grdBook.DataSource = DataProvider.Instance.ExecuteQuery(query);
-        }
 
         void LoadAccountList()
         {
-            string query = "EXEC dbo.USP_GetAccountByUserName @userName ";
-            grdAccount.DataSource = DataProvider.Instance.ExecuteQuery(query, new object[]{"DLan"});
+            string connectionSTR = "Data Source=.\\sqlexpress;Initial Catalog=StoryBookManagement;Integrated Security=True";
+            
+            SqlConnection connection = new SqlConnection(connectionSTR);
+
+            string query = "SELECT * FROM dbo.Account";
+
+            connection.Open();
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            DataTable data = new DataTable();
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+            adapter.Fill(data);
+
+            connection.Close();
+
+            grdAccount.DataSource = data;
         }
+            
 
         private void tabPage3_Click(object sender, EventArgs e)
         {

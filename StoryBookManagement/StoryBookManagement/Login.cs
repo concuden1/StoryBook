@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoryBookManagement.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,10 +25,23 @@ namespace StoryBookManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            StoryBook f = new StoryBook();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            string userName = txtUserName.Text;
+            string passWord = txtPassWord.Text;
+            if (Signin(userName,passWord))
+            {
+                StoryBook f = new StoryBook();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+            }
+        }
+        bool Signin(string userName, string passWord)
+        {
+            return AccountDAO.Instance.Login(userName, passWord);        
         }
 
         private void btnExit_Click(object sender, EventArgs e)

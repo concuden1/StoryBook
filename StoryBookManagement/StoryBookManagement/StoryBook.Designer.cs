@@ -35,7 +35,6 @@
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lsvList = new System.Windows.Forms.ListView();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -45,6 +44,7 @@
             this.cbBook = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnPay = new System.Windows.Forms.Button();
+            this.flpBook = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -114,13 +114,6 @@
             this.label1.Size = new System.Drawing.Size(485, 51);
             this.label1.TabIndex = 0;
             this.label1.Text = "StoryBook Management";
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(12, 118);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(344, 437);
-            this.panel2.TabIndex = 2;
             // 
             // panel3
             // 
@@ -208,15 +201,22 @@
             this.btnPay.Text = "Thanh toán";
             this.btnPay.UseVisualStyleBackColor = true;
             // 
+            // flpBook
+            // 
+            this.flpBook.Location = new System.Drawing.Point(0, 118);
+            this.flpBook.Name = "flpBook";
+            this.flpBook.Size = new System.Drawing.Size(356, 437);
+            this.flpBook.TabIndex = 6;
+            // 
             // StoryBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(751, 567);
+            this.Controls.Add(this.flpBook);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -245,7 +245,6 @@
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cbBook;
@@ -255,5 +254,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnPay;
+        private System.Windows.Forms.FlowLayoutPanel flpBook;
     }
 }
