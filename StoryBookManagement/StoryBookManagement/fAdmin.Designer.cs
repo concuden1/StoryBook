@@ -52,7 +52,7 @@
             this.btnDeleteBook = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grdBook = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnXemMucLuc = new System.Windows.Forms.Button();
@@ -109,7 +109,7 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdBook)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -354,20 +354,20 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.grdBook);
             this.panel1.Location = new System.Drawing.Point(7, 7);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(365, 429);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // grdBook
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(362, 421);
-            this.dataGridView1.TabIndex = 0;
+            this.grdBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdBook.Location = new System.Drawing.Point(0, 4);
+            this.grdBook.Name = "grdBook";
+            this.grdBook.RowTemplate.Height = 24;
+            this.grdBook.Size = new System.Drawing.Size(362, 421);
+            this.grdBook.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -815,7 +815,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdBook)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
@@ -854,7 +854,7 @@
         private System.Windows.Forms.Button btnDeleteBook;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView grdBook;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtBookName;

@@ -20,14 +20,17 @@ namespace StoryBookManagement
 
             LoadAccountList();
         }
+        void LoadBookList()
+        {
+            string query = "select * from book";
+
+            grdBook.DataSource = DataProvider.Instance.ExecuteQuery(query);
+        }
 
         void LoadAccountList()
         {
             string query = "EXEC dbo.USP_GetAccountByUserName @userName ";
-
-            DataProvider provider = new DataProvider();
-
-            grdAccount.DataSource = provider.ExecuteQuery(query, new object[]{"DLan"});
+            grdAccount.DataSource = DataProvider.Instance.ExecuteQuery(query, new object[]{"DLan"});
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
