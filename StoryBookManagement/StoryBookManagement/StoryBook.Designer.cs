@@ -45,6 +45,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnPay = new System.Windows.Forms.Button();
             this.flpBook = new System.Windows.Forms.FlowLayoutPanel();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -125,11 +129,17 @@
             // 
             // lsvList
             // 
-            this.lsvList.Location = new System.Drawing.Point(3, 3);
+            this.lsvList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.lsvList.Location = new System.Drawing.Point(2, 3);
             this.lsvList.Name = "lsvList";
             this.lsvList.Size = new System.Drawing.Size(369, 294);
             this.lsvList.TabIndex = 0;
             this.lsvList.UseCompatibleStateImageBehavior = false;
+            this.lsvList.View = System.Windows.Forms.View.Details;
             // 
             // panel4
             // 
@@ -208,6 +218,26 @@
             this.flpBook.Size = new System.Drawing.Size(356, 437);
             this.flpBook.TabIndex = 6;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên sách";
+            this.columnHeader1.Width = 137;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Số lượng";
+            this.columnHeader2.Width = 82;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Đơn vị";
+            this.columnHeader3.Width = 65;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thành tiền";
+            this.columnHeader4.Width = 82;
+            // 
             // StoryBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -255,5 +285,9 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.FlowLayoutPanel flpBook;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

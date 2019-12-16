@@ -60,11 +60,17 @@
       <DependentUpon>AccountProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillInfoDAO.cs" />
     <Compile Include="DAO\DataBook.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DataStory.cs" />
+    <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DAO\StoryDAO.cs" />
+    <Compile Include="DTO\Bill.cs" />
+    <Compile Include="DTO\BillInfo.cs" />
     <Compile Include="DTO\Book.cs" />
+    <Compile Include="DTO\Menu.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
