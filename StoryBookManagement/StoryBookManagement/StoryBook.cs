@@ -52,10 +52,10 @@ namespace StoryBookManagement
                 switch (item.Status)
                 {
                     case "Trống":
-                        btn.BackColor = Color.Pink;
+                        btn.BackColor = Color.Green;
                         break;
                     default:
-                        btn.BackColor = Color.Aqua;
+                        btn.BackColor = Color.Pink;
                         break;
 
                 }

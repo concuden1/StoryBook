@@ -47,9 +47,9 @@
             this.cbBook = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.btnPay = new System.Windows.Forms.Button();
             this.flpBook = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -196,7 +196,7 @@
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(86, 57);
             this.btnAddBook.TabIndex = 2;
-            this.btnAddBook.Text = "Thêm sách";
+            this.btnAddBook.Text = "Mua sách";
             this.btnAddBook.UseVisualStyleBackColor = true;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
@@ -226,6 +226,16 @@
             this.panel5.Size = new System.Drawing.Size(374, 64);
             this.panel5.TabIndex = 5;
             // 
+            // txtTotalPrice
+            // 
+            this.txtTotalPrice.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPrice.Location = new System.Drawing.Point(125, 24);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.Size = new System.Drawing.Size(100, 28);
+            this.txtTotalPrice.TabIndex = 4;
+            this.txtTotalPrice.Text = "0";
+            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // btnPay
             // 
             this.btnPay.Location = new System.Drawing.Point(231, 3);
@@ -241,16 +251,6 @@
             this.flpBook.Name = "flpBook";
             this.flpBook.Size = new System.Drawing.Size(356, 437);
             this.flpBook.TabIndex = 6;
-            // 
-            // txtTotalPrice
-            // 
-            this.txtTotalPrice.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPrice.Location = new System.Drawing.Point(125, 24);
-            this.txtTotalPrice.Name = "txtTotalPrice";
-            this.txtTotalPrice.Size = new System.Drawing.Size(100, 28);
-            this.txtTotalPrice.TabIndex = 4;
-            this.txtTotalPrice.Text = "0";
-            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // StoryBook
             // 
