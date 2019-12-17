@@ -20,8 +20,9 @@ namespace StoryBookManagement
 
             LoadAccountList();
         }
-
+        #region
         void LoadAccountList()
+       
         {
             string connectionSTR = "Data Source=.\\sqlexpress;Initial Catalog=StoryBookManagement;Integrated Security=True";
             
@@ -43,11 +44,26 @@ namespace StoryBookManagement
 
             grdAccount.DataSource = data;
         }
-            
+
+        void LoadListBooks()
+        {
+            grdMucluc.DataSource = BooksDAO.Instance.GetListBooks();
+        }
+        #endregion
 
         private void tabPage3_Click(object sender, EventArgs e)
         {
+           
+        }
 
+        private void btnShowBook_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnXemMucLuc_Click(object sender, EventArgs e)
+        {
+            LoadListBooks();
         }
     }
 }

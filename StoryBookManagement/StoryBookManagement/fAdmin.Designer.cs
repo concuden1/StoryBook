@@ -324,6 +324,7 @@
             this.btnShowBook.TabIndex = 3;
             this.btnShowBook.Text = "Xem";
             this.btnShowBook.UseVisualStyleBackColor = true;
+            this.btnShowBook.Click += new System.EventHandler(this.btnShowBook_Click);
             // 
             // btnEditBook
             // 
@@ -401,6 +402,7 @@
             this.btnXemMucLuc.TabIndex = 3;
             this.btnXemMucLuc.Text = "Xem";
             this.btnXemMucLuc.UseVisualStyleBackColor = true;
+            this.btnXemMucLuc.Click += new System.EventHandler(this.btnXemMucLuc_Click);
             // 
             // btnSuaMucLuc
             // 

@@ -35,6 +35,22 @@ namespace StoryBookManagement.DAO
 
             return list;
         }
-        
+        public List<Books> GetListBooks()
+        {
+
+            List<Books> list = new List<Books>();
+
+            string query = "Select * from Story ";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Books books = new Books(item);
+                list.Add(books);
+            }
+
+            return list;
+        }
     }
 }
