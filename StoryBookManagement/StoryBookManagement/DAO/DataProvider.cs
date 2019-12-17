@@ -82,7 +82,7 @@ namespace StoryBookManagement.DAO
                     }
                 }
 
-                data = command.ExecuteNonQuery();
+               data = command.ExecuteNonQuery();
 
                 connection.Close();
             }

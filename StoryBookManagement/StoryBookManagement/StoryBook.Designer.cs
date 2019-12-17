@@ -37,18 +37,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lsvList = new System.Windows.Forms.ListView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.nmBookCount = new System.Windows.Forms.NumericUpDown();
-            this.btnAddBook = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cbBook = new System.Windows.Forms.ComboBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnPay = new System.Windows.Forms.Button();
-            this.flpBook = new System.Windows.Forms.FlowLayoutPanel();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.nmBookCount = new System.Windows.Forms.NumericUpDown();
+            this.btnAddBook = new System.Windows.Forms.Button();
+            this.cbBook = new System.Windows.Forms.ComboBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnPay = new System.Windows.Forms.Button();
+            this.flpBook = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -141,12 +142,32 @@
             this.lsvList.UseCompatibleStateImageBehavior = false;
             this.lsvList.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên sách";
+            this.columnHeader1.Width = 137;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Số lượng";
+            this.columnHeader2.Width = 82;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Đơn vị";
+            this.columnHeader3.Width = 65;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Thành tiền";
+            this.columnHeader4.Width = 82;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.nmBookCount);
             this.panel4.Controls.Add(this.btnAddBook);
-            this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.cbBook);
+            this.panel4.Controls.Add(this.cbCategory);
             this.panel4.Location = new System.Drawing.Point(362, 118);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(375, 61);
@@ -177,25 +198,28 @@
             this.btnAddBook.TabIndex = 2;
             this.btnAddBook.Text = "Thêm sách";
             this.btnAddBook.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(203, 24);
-            this.comboBox1.TabIndex = 1;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
             // cbBook
             // 
             this.cbBook.FormattingEnabled = true;
-            this.cbBook.Location = new System.Drawing.Point(3, 3);
+            this.cbBook.Location = new System.Drawing.Point(3, 33);
             this.cbBook.Name = "cbBook";
             this.cbBook.Size = new System.Drawing.Size(203, 24);
-            this.cbBook.TabIndex = 0;
+            this.cbBook.TabIndex = 1;
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(3, 3);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(203, 24);
+            this.cbCategory.TabIndex = 0;
+            this.cbCategory.SelectedIndexChanged += new System.EventHandler(this.cbCategory_SelectedIndexChanged);
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.txtTotalPrice);
             this.panel5.Controls.Add(this.btnPay);
             this.panel5.Location = new System.Drawing.Point(362, 491);
             this.panel5.Name = "panel5";
@@ -218,25 +242,15 @@
             this.flpBook.Size = new System.Drawing.Size(356, 437);
             this.flpBook.TabIndex = 6;
             // 
-            // columnHeader1
+            // txtTotalPrice
             // 
-            this.columnHeader1.Text = "Tên sách";
-            this.columnHeader1.Width = 137;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Số lượng";
-            this.columnHeader2.Width = 82;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Đơn vị";
-            this.columnHeader3.Width = 65;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Thành tiền";
-            this.columnHeader4.Width = 82;
+            this.txtTotalPrice.Font = new System.Drawing.Font("Arial Narrow", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPrice.Location = new System.Drawing.Point(125, 24);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.Size = new System.Drawing.Size(100, 28);
+            this.txtTotalPrice.TabIndex = 4;
+            this.txtTotalPrice.Text = "0";
+            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // StoryBook
             // 
@@ -261,6 +275,7 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nmBookCount)).EndInit();
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,11 +292,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox cbBook;
+        private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.ListView lsvList;
         private System.Windows.Forms.NumericUpDown nmBookCount;
         private System.Windows.Forms.Button btnAddBook;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbBook;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.FlowLayoutPanel flpBook;
@@ -289,5 +304,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.TextBox txtTotalPrice;
     }
 }

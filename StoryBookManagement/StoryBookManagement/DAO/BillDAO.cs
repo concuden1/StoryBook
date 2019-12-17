@@ -33,5 +33,21 @@ namespace StoryBookManagement.DAO
 
             return -1;
         }
+        public void InsertBill(int id)
+        {
+            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBill @idStory", new object[] { id });
+        }
+
+        public int GetMaxIDBill()
+        {
+            try
+            {
+                return (int)DataProvider.Instance.ExecuteScalar("SELECT MAX (id) From dbo.Bill");
+            }
+            catch
+            {
+                return 1;
+            }
+        }
     }
 }

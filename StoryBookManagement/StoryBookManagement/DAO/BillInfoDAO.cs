@@ -33,5 +33,10 @@ namespace StoryBookManagement.DAO
 
             return listBillInfo;
         }
+
+        public void InsertBillInfo(int idBill, int idStory, int count)
+        {
+            DataProvider.Instance.ExecuteNonQuery("exec USP_InsertBillInfo @idBill , @idStory , @count", new object[] { idBill, idStory, count });
+        }
     }
 }
